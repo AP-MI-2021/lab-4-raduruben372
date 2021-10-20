@@ -38,7 +38,7 @@ def numere_negative_din_lista(lst):
     '''
     lista_numer_neg = []
     for numar in lst:
-        if numar < 0:
+        if numar < 0 and numar not in lista_numer_neg:
             lista_numer_neg.append(numar)
     return lista_numer_neg
 
@@ -77,8 +77,8 @@ def este_prim(n):
     '''
     if n == 1:
         return False
-    for i in range(2,n):
-        if n%i == 0:
+    for i in range(2, n):
+        if n % i == 0:
             return False
     return True
 
@@ -171,12 +171,12 @@ def main():
         if numar == '1':
             lst = citire_lista()
         elif numar == '2':
-            print(numere_negative_din_lista(lst))
+            print('Numerele negative nenule din lista sunt:', numere_negative_din_lista(lst))
         elif numar == '3':
             cifra_citita = int(input('Dati cifra : '))
-            print(min_cu_ult_cifra(lst,cifra_citita))
+            print('Cel mai mic numar este: ', min_cu_ult_cifra(lst,cifra_citita))
         elif numar == '4':
-            print(numere_superprime_lista(lst))
+            print('Numerele super prime sunt', numere_superprime_lista(lst))
         elif numar == '5':
             print(lista_cmmdc_neg_inv(lst))
         elif numar =='x':
