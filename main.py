@@ -7,7 +7,7 @@ def print_menu():
     :return: meniul
     '''
     print('''
-1.  Citirea unei liste de numere întregi.
+1.  Citire lista numere intregi.
 2.  Afișarea tuturor numerelor negative nenule din listă
 3.  Afișarea celui mai mic număr care are ultima cifră egală cu o cifră citită de la tastatură.
 4.  Afișarea tuturor numerelor din listă care sunt superprime. Un număr este superprim dacă este
@@ -19,6 +19,7 @@ x.  Iesire
     ''')
 
 
+#P1
 def citire_lista():
     lst = []
     stringCitit = input("Dati lista(separata prin ,): ")
@@ -28,6 +29,7 @@ def citire_lista():
     return lst
 
 
+#P2
 def numere_negative_din_lista(lst):
     '''
     Afiseaza toate numerele negative nenule din lista
@@ -41,12 +43,12 @@ def numere_negative_din_lista(lst):
     return lista_numer_neg
 
 
-
 def  test_numere_negative_din_lista():
     assert numere_negative_din_lista([2, 3, 4 ,10 , -1 , -2 , 0]) == [-1, -2]
     assert numere_negative_din_lista([2, -3, -5, 6]) == [-3, -5]
 
 
+#P3
 def min_cu_ult_cifra(lst, cifra):
     '''
     Afiseaza cel mai mic numar care are ultima cifra egala cu un numar citit de la tastatura
@@ -66,6 +68,7 @@ def test_min_cu_ult_cifra():
     assert min_cu_ult_cifra([2,3005,40,55,51,101,21], 1) == 21
 
 
+#P4
 def este_prim(n):
     '''
     Verifica daca n este prim
@@ -112,6 +115,7 @@ def test_numere_superprime_lista():
     assert numere_superprime_lista([200, 400, 5022]) == []
 
 
+#P5
 def lista_cmmdc_neg_inv(lst):
     '''
     Inlocuieste numerele pozitive cu cmmdc, cele negative sunt puse invers
@@ -144,6 +148,7 @@ def lista_cmmdc_neg_inv(lst):
 
 def test_lista_cmmdc_neg_inv():
     assert lista_cmmdc_neg_inv([-76, 12, 24, -13, 144]) == [-67, 12, 12, -31, 12]
+    assert lista_cmmdc_neg_inv([-23, 12, 24, -15, 144]) == [-32, 12, 12, -51, 12]
 
 
 def toate_testele():
@@ -176,6 +181,8 @@ def main():
             print(lista_cmmdc_neg_inv(lst))
         elif numar =='x':
             break
+        else:
+            print('Introdu alt numar!!!')
 
 
 
