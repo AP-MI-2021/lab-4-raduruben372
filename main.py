@@ -51,7 +51,7 @@ def  test_numere_negative_din_lista():
 #P3
 def min_cu_ult_cifra(lst, cifra):
     '''
-    Afiseaza cel mai mic numar care are ultima cifra egala cu un numar citit de la tastatura
+    Afiseaza cel mai mic numar care are ultima cifra egala cu o cifra citita de la tastatura
     :return: Cel mai mic numar cu ultima cifra egala cu cea citita la tastatura
     '''
     min_cu_cif = None
@@ -118,9 +118,9 @@ def test_numere_superprime_lista():
 #P5
 def lista_cmmdc_neg_inv(lst):
     '''
-    Inlocuieste numerele pozitive cu cmmdc, cele negative sunt puse invers
+    Inlocuieste numerele pozitive cu cmmdc-ul lor, cele negative fiind puse invers
     :param lst: lista numere intregi
-    :return: lista in care numere poz sunt inloc cu cmmdc, iar cele negative sunt puse invers
+    :return: lista in care numere pozitive sunt inlocuite cu cmmdc-ul lor, iar cele negative sunt puse invers
     '''
     lista_poz = []
     lista_finala = []
@@ -178,13 +178,11 @@ def main():
         elif numar == '4':
             print('Numerele super prime sunt: ', numere_superprime_lista(lst))
         elif numar == '5':
-            print(lista_cmmdc_neg_inv(lst))
+            print('Lista este: ', lista_cmmdc_neg_inv(lst))
         elif numar =='x':
             break
         else:
             print('Introdu alt numar!!!')
-
-
 
 
 if __name__ == '__main__':
