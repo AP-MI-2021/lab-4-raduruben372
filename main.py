@@ -104,14 +104,14 @@ def numere_superprime_lista(lst):
             if este_prim(cop_numar) is False:
                 superprim = False
             cop_numar //= 10
-        if superprim is True:
+        if superprim is True and numar not in lst_super_prim:
             lst_super_prim.append(numar)
     return lst_super_prim
 
 
 def test_numere_superprime_lista():
     assert numere_superprime_lista([100, 239, 11]) == [239]
-    assert numere_superprime_lista([231, 239, 400]) == [239]
+    assert numere_superprime_lista([231, 239, 239, 400]) == [239]
     assert numere_superprime_lista([200, 400, 5022]) == []
 
 
