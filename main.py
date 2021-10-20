@@ -45,7 +45,7 @@ def numere_negative_din_lista(lst):
 
 def  test_numere_negative_din_lista():
     assert numere_negative_din_lista([2, 3, 4 ,10 , -1 , -2 , 0]) == [-1, -2]
-    assert numere_negative_din_lista([2, -3, -5, 6]) == [-3, -5]
+    assert numere_negative_din_lista([2, -3, -5, -3, 6]) == [-3, -5]
 
 
 #P3
@@ -176,7 +176,7 @@ def main():
             cifra_citita = int(input('Dati cifra : '))
             print('Cel mai mic numar este: ', min_cu_ult_cifra(lst,cifra_citita))
         elif numar == '4':
-            print('Numerele super prime sunt', numere_superprime_lista(lst))
+            print('Numerele super prime sunt: ', numere_superprime_lista(lst))
         elif numar == '5':
             print(lista_cmmdc_neg_inv(lst))
         elif numar =='x':
